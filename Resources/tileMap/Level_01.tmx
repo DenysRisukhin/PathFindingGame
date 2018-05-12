@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.0.3" orientation="orthogonal" renderorder="right-down" width="25" height="25" tilewidth="32" tileheight="32" nextobjectid="1">
+ <tileset firstgid="1" name="CatMaze" tilewidth="32" tileheight="32" tilecount="8" columns="8">
+  <image source="CatMaze.png" width="256" height="256"/>
+  <tile id="0">
+   <properties>
+    <property name="Bone" value="1"/>
+   </properties>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="Multibone" value="1"/>
+   </properties>
+  </tile>
+  <tile id="5">
+   <properties>
+    <property name="Start" value="1"/>
+   </properties>
+  </tile>
+  <tile id="17">
+   <properties>
+    <property name="Dog" value="1"/>
+   </properties>
+  </tile>
+  <tile id="26">
+   <properties>
+    <property name="Spawn" value="1"/>
+   </properties>
+  </tile>
+  <tile id="27">
+   <properties>
+    <property name="Exit" value="1"/>
+   </properties>
+  </tile>
+  <tile id="29">
+   <properties>
+    <property name="Fish" value="1"/>
+   </properties>
+  </tile>
+  <tile id="32">
+   <properties>
+    <property name="Wall" value="1"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="34" source="t8.tsx"/>
+ <tileset firstgid="290" source="t1.tsx"/>
+ <layer name="Background1" width="25" height="25">
+  <data encoding="base64" compression="zlib">
+   eJy1ldENhDAMQ2GVzFHUkTvKfd0iTMAXUhTZiduKDwuOQl7spjo7j8OcruL3ji7x+jVDEXpXZUTdC5nO9O0Zt8BAPmcyVhjMxxC1y5idmSzbnTlCtZivbD+yHPpCHTbvbK2DtZVeM3XyPWOoefcg5nWlZ2Uu2RnaVVXnT+TXzN0P8O7LaEQVw3v2DObHAMN/rzD8eqxhhJPVqHxkDBMYMe+4H/H/g/Wu+Igaga0wqplDWWVq4FnMxJ8b1u/r8wfUwDOUPdqbLxjZ+YxzVekBVXHo0A==
+  </data>
+ </layer>
+ <layer name="Background" width="25" height="25">
+  <data encoding="base64" compression="zlib">
+   eJy1VEEOwCAM6gP9oN/Zy3ZdFimU1gMxi9oCxe2I2B8s8t3BEtfbPRSczqo9EKeKpxXeVS/RXYQg3KZ0ZLqcmVcyk3Ho6vjXQhwz/mye1TosQ8qew9XRj8523jHSMwn1DbpQsptlWOXLvMn+Q2r+HP8VXkqdh8yG6ZjOxlSP03xcj9TsOllXPZ+cedfP2zUqPV7s3jWy
+  </data>
+ </layer>
+ <layer name="Objects" width="25" height="25">
+  <data encoding="base64" compression="zlib">
+   eJzdleEKwCAIhH3B/L33pwcZ+xGI6O0Sg7EPxqhZd9kskZwZ9OlLOyOLizRYLTT2YZBxaCzS39EYyZyeilfE8rwzL+PTMiXOTfdaJNDxbbsf6+lmNz+IE/4y2Fr9Mn9YQxfsf2jr4DqkgejeM3+Wqnt31memwcYzsH4reazmonrPV4g8dp2L/m5SM7cG3zI/DChHJ/N3A1aaHgY=
+  </data>
+ </layer>
+</map>
