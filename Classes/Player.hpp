@@ -12,6 +12,9 @@
 #include "Graph.hpp"
 #include "LevelScene.h"
 
+/*!
+ * Represents main character.
+ */
 class Player : public cocos2d::Sprite
 {
     

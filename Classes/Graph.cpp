@@ -53,16 +53,16 @@ Graph::walkableAdjacentTilesCoordForTileCoord(Node &node)
     // diagonal movement
     
     // Bottom Right
-    toLocs.push_back(Vec2 {node._loc.x + 1, node._loc.y + 1} );
-    
-    // Top Right
-    toLocs.push_back(Vec2 {node._loc.x + 1, node._loc.y - 1} );
-    
-    // Bottom Left
-    toLocs.push_back(Vec2 {node._loc.x - 1, node._loc.y + 1} );
-    
-    // Top Left
-    toLocs.push_back(Vec2 {node._loc.x - 1, node._loc.y - 1} );
+//    toLocs.push_back(Vec2 {node._loc.x + 1, node._loc.y + 1} );
+//    
+//    // Top Right
+//    toLocs.push_back(Vec2 {node._loc.x + 1, node._loc.y - 1} );
+//    
+//    // Bottom Left
+//    toLocs.push_back(Vec2 {node._loc.x - 1, node._loc.y + 1} );
+//    
+//    // Top Left
+//    toLocs.push_back(Vec2 {node._loc.x - 1, node._loc.y - 1} );
     
     for (Vec2 toLoc : toLocs) {
         // Checking neighbors on the border of the map and the wall

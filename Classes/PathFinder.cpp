@@ -10,13 +10,11 @@
 
 using namespace cocos2d;
 
-int PathFinder::find(Graph *g, Node start, Node end, function<void (PathStepData &conn)> block)
-{
+int PathFinder::find(Graph *g, Node start, Node end, function<void (PathStepData &conn)> block){
     return find(g, start, end, ManhattanDistance(end), block);
 }
 
-int PathFinder::find(Graph *g, Node start, Node end, std::function<int(Node &)> heuristic, std::function<void (PathStepData &conn)> block)
-{
+int PathFinder::find(Graph *g, Node start, Node end, std::function<int(Node &)> heuristic, std::function<void (PathStepData &conn)> block){
     log("start %s -> end %s", start.getDesc().c_str(), end.getDesc().c_str());
     
     ShortestPathStep startStep(start, PathStepData::NONE, 0, heuristic(start));
@@ -26,8 +24,7 @@ int PathFinder::find(Graph *g, Node start, Node end, std::function<int(Node &)> 
     
     ShortestPathStep currentStep;
     
-    while (openSteps.size() > 0)
-    {
+    while (openSteps.size() > 0){
         // Get the lowest F cost. The list is ordered and first step is always the one with the lowest F coast
         currentStep = openSteps.lowestTrace();
         
@@ -59,6 +56,8 @@ int PathFinder::find(Graph *g, Node start, Node end, std::function<int(Node &)> 
                 log("toNode is in CLOSED list");
                 
                 auto iter = closedSteps.find(toNode);
+                
+                // this is current Adjacents
                 toNodeStep = *iter;
                 
                 log("toNodeTrace %s", toNodeStep.getDesc().c_str());

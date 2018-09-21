@@ -11,13 +11,16 @@
 
 class LevelScene;
 
-// The class Graph uses for path representation as a graph
+/*!
+ * Represents path as a graph.
+ */
 class Graph
 {
 public:
     
-    
-    // The class Node - inner class, which keep tile coordinates
+    /*!
+     * Represents inner class, which keep tile coordinates.
+     */
     struct Node
     {
         cocos2d::Vec2 _loc;
@@ -45,11 +48,12 @@ public:
         static const Node INVALID;
     };
     
-    // The class PathStepData - inner class, which keep:
-    // 1. start and final tile coordinates
-    // 2. Tile base cost
-    // 3. Compute the cost of moving from a step to an adjacent one
-    
+    /*!
+     * Represents inner class, which keep:
+     * 1. start and final tile coordinates
+     * 2. Tile base cost
+     * 3. Compute the cost of moving from a step to an adjacent one
+     */
     struct PathStepData
     {
         Node _from;
@@ -68,15 +72,16 @@ public:
             // return 1;
             
             // The function getDistance() calculates the distance between two points
-            // auto tt = _from._loc.getDistance(_to._loc) + _baseCost;
+             //auto tt = _from._loc.getDistance(_to._loc) + _baseCost;
             //cocos2d::log("(%f %f) - (%f %f) = %f", _from._loc.x, _from._loc.y, _to._loc.x, _to._loc.y, _from._loc.getDistance(_to._loc));
-            //return _from._loc.getDistance(_to._loc) + _baseCost;;
+            return _from._loc.getDistance(_to._loc) + _baseCost;;
             
             // But it have to be different if we can move diagonally and/or if there is swamps, hills, etc...
             // Computing with integers is far more efficient than floats, so insted of using floats to represent the cost of a diagonal move,
             // we can simply multyple the coast by 10 and round them, so moving horizontally ot vertically will cost 10 and diagonally will cost 14.
-            int moveCoast = ((_from._loc.x != _to._loc.x) && (_from._loc.y != _to._loc.y)) ? 14 : 10;
-            return moveCoast + _baseCost;
+            
+            //int moveCoast = ((_from._loc.x != _to._loc.x) && (_from._loc.y != _to._loc.y)) ? 14 : 10;
+           // return moveCoast + _baseCost;
         }
         
         std::string getDesc() const
@@ -93,7 +98,9 @@ public:
 public:
     static std::shared_ptr<Graph> createWithScene(LevelScene *scene);
     
-    // Get all the walkable tiles adjacent
+    /*!
+     * Gets all the walkable tiles adjacent.
+     */
     std::vector<PathStepData> walkableAdjacentTilesCoordForTileCoord(Node &node);
     
 private:

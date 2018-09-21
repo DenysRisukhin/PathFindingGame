@@ -317,16 +317,13 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				9E6A1BE92131663200A01271 /* PathFinding */,
 				46880B8419C43A87006E1F66 /* AppDelegate.cpp */,
 				46880B8519C43A87006E1F66 /* AppDelegate.h */,
 				9EC65A6D1F827F9800DEB2FB /* Player.cpp */,
 				9EC65A6E1F827F9800DEB2FB /* Player.hpp */,
-				9EC65A6F1F827F9800DEB2FB /* Graph.cpp */,
-				9EC65A701F827F9800DEB2FB /* Graph.hpp */,
 				9EC65A711F827F9800DEB2FB /* LevelScene.cpp */,
 				9EC65A721F827F9800DEB2FB /* LevelScene.h */,
-				9EC65A731F827F9800DEB2FB /* PathFinder.cpp */,
-				9EC65A741F827F9800DEB2FB /* PathFinder.hpp */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -378,6 +375,17 @@
 			name = Icons;
 			path = ios;
 			sourceTree = SOURCE_ROOT;
+		};
+		9E6A1BE92131663200A01271 /* PathFinding */ = {
+			isa = PBXGroup;
+			children = (
+				9EC65A731F827F9800DEB2FB /* PathFinder.cpp */,
+				9EC65A741F827F9800DEB2FB /* PathFinder.hpp */,
+				9EC65A6F1F827F9800DEB2FB /* Graph.cpp */,
+				9EC65A701F827F9800DEB2FB /* Graph.hpp */,
+			);
+			name = PathFinding;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 

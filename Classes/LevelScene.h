@@ -8,6 +8,10 @@
 
 using namespace cocos2d;
 
+/*!
+ * Represents game level: player, tilemap etc.
+ */
+
 class Player;
 
 class LevelScene : public cocos2d::Layer
